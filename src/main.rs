@@ -1,24 +1,19 @@
-
-#[derive(Debug)]
-struct Anime {
-    title: String,
-    episode: u16,
-    episodes: u16
-}
-
-impl Anime {
-    fn drop(&mut self) {
-        self.title = self.title.clone() + &" - dropped";
-        self.episode = 0;
-    }
-}
+use rand::Rng;
 
 fn main() {
-    let mut ya = Anime { title: "Boku no Pico".to_string(), episode: 10000, episodes: 4 };
+    let mut matrix = vec![];
+    let height = 10;
+    let width = 10;
 
-    println!("{:?}", ya);
+    for _ in 0..width {
+        let mut mx = vec![];
+        for _ in 0..height {
+            mx.push(rand::thread_rng().gen_range(0, 9));
+        }
+        matrix.push(mx);
+    }
 
-    ya.drop();
-
-    println!("{:?}", ya);
+    for i in matrix.iter() {
+        println!("{:?}", i);
+    }
 }
