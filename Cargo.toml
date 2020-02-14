@@ -1,6 +1,6 @@
 [package]
-name = "Hello world"
-version = "0.1.0"
+name = "hello_world"
+version = "0.1.1"
 authors = ["KoChan-s <needahentai@gmail.com>"]
 edition = "2018"
 
